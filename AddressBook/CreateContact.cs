@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AddressBookSystem
 {
-    public class Contacts
+    public class Contact
     {
         public string firstName;
         public string lastName;
@@ -17,7 +17,7 @@ namespace AddressBookSystem
         public long phoneNumber;
         public string email;
 
-        public Contacts(string firstName, string lastName, string address, string city, string state, int zipcode, long phoneNumber, string email)
+        public Contact(string firstName, string lastName, string address, string city, string state, int zipcode, long phoneNumber, string email)
         {
             this.firstName = firstName;
             this.lastName = lastName;
@@ -28,7 +28,10 @@ namespace AddressBookSystem
             this.phoneNumber = phoneNumber;
             this.email = email;
         }
-        public static void CreateContacts()
+       
+
+        // Add New Contact Details
+        public static void AddNewContact()
         {
             Console.WriteLine("Enter First Name:-");
             string firstName = Console.ReadLine();
@@ -41,12 +44,14 @@ namespace AddressBookSystem
             Console.WriteLine("Enter State:-");
             string state = Console.ReadLine();
             Console.WriteLine("Enter ZipCode:-");
-            int zip = Convert.ToInt32(Console.ReadLine());
+            int zipCode = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter Phone Number:-");
-            long phoneNo = Convert.ToInt32(Console.ReadLine());
+            long phoneNumber = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter Email Id:-");
             string email = Console.ReadLine();
-            Console.WriteLine("Contact has been Created..!!");
+            Console.WriteLine("Contact has been Added");
         }
     }
+
+
 }
